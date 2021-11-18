@@ -117,6 +117,7 @@
             this.btnDecryp.TabIndex = 5;
             this.btnDecryp.Text = "Decryption";
             this.btnDecryp.UseVisualStyleBackColor = true;
+            this.btnDecryp.Click += new System.EventHandler(this.btnDecryp_Click);
             // 
             // Form1
             // 
