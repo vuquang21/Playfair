@@ -54,14 +54,14 @@
             this.tbKey.Location = new System.Drawing.Point(85, 245);
             this.tbKey.Name = "tbKey";
             this.tbKey.Size = new System.Drawing.Size(640, 22);
-            this.tbKey.TabIndex = 2;
+            this.tbKey.TabIndex = 1;
             // 
             // rtbPlaintext
             // 
             this.rtbPlaintext.Location = new System.Drawing.Point(85, 40);
             this.rtbPlaintext.Name = "rtbPlaintext";
             this.rtbPlaintext.Size = new System.Drawing.Size(398, 125);
-            this.rtbPlaintext.TabIndex = 3;
+            this.rtbPlaintext.TabIndex = 0;
             this.rtbPlaintext.Text = "";
             // 
             // label1
@@ -79,7 +79,8 @@
             this.rtbCiphtertext.Name = "rtbCiphtertext";
             this.rtbCiphtertext.ReadOnly = true;
             this.rtbCiphtertext.Size = new System.Drawing.Size(640, 125);
-            this.rtbCiphtertext.TabIndex = 3;
+            this.rtbCiphtertext.TabIndex = 4;
+            this.rtbCiphtertext.TabStop = false;
             this.rtbCiphtertext.Text = "";
             // 
             // label3
@@ -105,7 +106,7 @@
             this.btnEncryp.Location = new System.Drawing.Point(464, 290);
             this.btnEncryp.Name = "btnEncryp";
             this.btnEncryp.Size = new System.Drawing.Size(118, 40);
-            this.btnEncryp.TabIndex = 5;
+            this.btnEncryp.TabIndex = 2;
             this.btnEncryp.Text = "Encryption";
             this.btnEncryp.UseVisualStyleBackColor = true;
             this.btnEncryp.Click += new System.EventHandler(this.btnEncryp_Click);
@@ -115,7 +116,7 @@
             this.btnDecryp.Location = new System.Drawing.Point(607, 290);
             this.btnDecryp.Name = "btnDecryp";
             this.btnDecryp.Size = new System.Drawing.Size(118, 40);
-            this.btnDecryp.TabIndex = 5;
+            this.btnDecryp.TabIndex = 3;
             this.btnDecryp.Text = "Decryption";
             this.btnDecryp.UseVisualStyleBackColor = true;
             this.btnDecryp.Click += new System.EventHandler(this.btnDecryp_Click);
@@ -126,9 +127,9 @@
             this.rtbMatrix.Name = "rtbMatrix";
             this.rtbMatrix.ReadOnly = true;
             this.rtbMatrix.Size = new System.Drawing.Size(152, 125);
-            this.rtbMatrix.TabIndex = 6;
+            this.rtbMatrix.TabIndex = 5;
+            this.rtbMatrix.TabStop = false;
             this.rtbMatrix.Text = "";
-            //this.rtbMatrix.TextChanged += new System.EventHandler(this.onInputKeyChange);
             // 
             // Form1
             // 
