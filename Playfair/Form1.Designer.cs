@@ -37,12 +37,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnEncryp = new System.Windows.Forms.Button();
             this.btnDecryp = new System.Windows.Forms.Button();
+            this.rtbMatrix = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 188);
+            this.label2.Location = new System.Drawing.Point(82, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 16);
             this.label2.TabIndex = 1;
@@ -50,14 +51,14 @@
             // 
             // tbKey
             // 
-            this.tbKey.Location = new System.Drawing.Point(132, 216);
+            this.tbKey.Location = new System.Drawing.Point(85, 245);
             this.tbKey.Name = "tbKey";
-            this.tbKey.Size = new System.Drawing.Size(398, 22);
+            this.tbKey.Size = new System.Drawing.Size(640, 22);
             this.tbKey.TabIndex = 2;
             // 
             // rtbPlaintext
             // 
-            this.rtbPlaintext.Location = new System.Drawing.Point(132, 40);
+            this.rtbPlaintext.Location = new System.Drawing.Point(85, 40);
             this.rtbPlaintext.Name = "rtbPlaintext";
             this.rtbPlaintext.Size = new System.Drawing.Size(398, 125);
             this.rtbPlaintext.TabIndex = 3;
@@ -74,10 +75,10 @@
             // 
             // rtbCiphtertext
             // 
-            this.rtbCiphtertext.Location = new System.Drawing.Point(132, 354);
+            this.rtbCiphtertext.Location = new System.Drawing.Point(85, 356);
             this.rtbCiphtertext.Name = "rtbCiphtertext";
             this.rtbCiphtertext.ReadOnly = true;
-            this.rtbCiphtertext.Size = new System.Drawing.Size(398, 125);
+            this.rtbCiphtertext.Size = new System.Drawing.Size(640, 125);
             this.rtbCiphtertext.TabIndex = 3;
             this.rtbCiphtertext.Text = "";
             // 
@@ -101,7 +102,7 @@
             // 
             // btnEncryp
             // 
-            this.btnEncryp.Location = new System.Drawing.Point(271, 264);
+            this.btnEncryp.Location = new System.Drawing.Point(464, 290);
             this.btnEncryp.Name = "btnEncryp";
             this.btnEncryp.Size = new System.Drawing.Size(118, 40);
             this.btnEncryp.TabIndex = 5;
@@ -111,7 +112,7 @@
             // 
             // btnDecryp
             // 
-            this.btnDecryp.Location = new System.Drawing.Point(412, 264);
+            this.btnDecryp.Location = new System.Drawing.Point(607, 290);
             this.btnDecryp.Name = "btnDecryp";
             this.btnDecryp.Size = new System.Drawing.Size(118, 40);
             this.btnDecryp.TabIndex = 5;
@@ -119,11 +120,22 @@
             this.btnDecryp.UseVisualStyleBackColor = true;
             this.btnDecryp.Click += new System.EventHandler(this.btnDecryp_Click);
             // 
+            // rtbMatrix
+            // 
+            this.rtbMatrix.Location = new System.Drawing.Point(541, 40);
+            this.rtbMatrix.Name = "rtbMatrix";
+            this.rtbMatrix.ReadOnly = true;
+            this.rtbMatrix.Size = new System.Drawing.Size(152, 125);
+            this.rtbMatrix.TabIndex = 6;
+            this.rtbMatrix.Text = "";
+            //this.rtbMatrix.TextChanged += new System.EventHandler(this.onInputKeyChange);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 547);
+            this.ClientSize = new System.Drawing.Size(818, 547);
+            this.Controls.Add(this.rtbMatrix);
             this.Controls.Add(this.btnDecryp);
             this.Controls.Add(this.btnEncryp);
             this.Controls.Add(this.label4);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEncryp;
         private System.Windows.Forms.Button btnDecryp;
+        private System.Windows.Forms.RichTextBox rtbMatrix;
     }
 }
 

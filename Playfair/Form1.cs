@@ -23,9 +23,11 @@ namespace Playfair
 
         private void Form1_Load(object sender, EventArgs e, List<char> arrPlaintext, KeyEventArgs key)
         {
-
+            
         }
 
+       
+        
         public void KeyAddAlpa(StringBuilder _stringKey, char[] alpa)
         {
             foreach (var i in alpa)
@@ -178,16 +180,7 @@ namespace Playfair
             char[,] matrix = new char[5, 5];
             int k = 0;
             KeyAddAlpa(_stringKey, alpa);
-            /*for (int i = 0; i < _stringKey.Length; i++)
-            {
-                for (int j = 0; j < i; j++)
-                {
-                    if (_stringKey[j] == _stringKey[i])
-                    {
-                        _stringKey.Remove(_stringKey[j], 1);
-                    }
-                }
-            }*/
+
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
@@ -195,6 +188,25 @@ namespace Playfair
                     matrix[i, j] = _stringKey[k++];
                 }
             }
+
+
+
+            // hiển thị ma trận 
+
+            var keyShow = "";
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    var index = i * 5 + j;
+                    keyShow += _stringKey[index] + " ";
+                }
+                keyShow += "\r\n";
+            }
+            this.rtbMatrix.Text = keyShow;
+
+
+
 
             k = 0;
             var arr = new List<int>(_stringPlaintext.Length * 2);
@@ -246,8 +258,9 @@ namespace Playfair
                     {
                         result.Append(matrix[list[i + 2], list[i + 3] + 1]);
                     }
+                    result.Append(' ');
                 }
-                result.Append(' ');
+                
                 // nếu tạo thành cột
                 if (list[i + 1] == list[i + 3])
                 {
@@ -267,8 +280,9 @@ namespace Playfair
                     {
                         result.Append(matrix[list[i + 2] + 1, list[i + 3]]);
                     }
+                    result.Append(' ');
                 }
-                result.Append(' ');
+                
             }
 
 
@@ -309,6 +323,11 @@ namespace Playfair
                 }
             }
         }
+
+
+
+
+
         private void btnDecryp_Click(object sender, EventArgs e)
         {
 
@@ -429,7 +448,17 @@ namespace Playfair
                     matrix[i, j] = _stringKey[k++];
                 }
             }
+            StringBuilder showMatrix = new StringBuilder();
 
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    showMatrix.Append(matrix[i, j]);        
+                    showMatrix.Append(' ');        
+                }
+            }
+            rtbMatrix.Text = showMatrix.ToString();
             k = 0;
             var arr = new List<int>(_stringPlaintext.Length * 2);
             // chỉ số của các phần tử
@@ -489,7 +518,7 @@ namespace Playfair
                     }
                     else
                     {
-                        result.Append(matrix[list[i] + 1, list[i + 1]]);
+                        result.Append(matrix[list[i] - 1, list[i + 1]]);
                     }
                     if (list[i + 2] == 4)
                     {
@@ -497,7 +526,7 @@ namespace Playfair
                     }
                     else
                     {
-                        result.Append(matrix[list[i + 2] + 1, list[i + 3]]);
+                        result.Append(matrix[list[i + 2] - 1, list[i + 3]]);
                     }
                 }
                 
@@ -527,5 +556,7 @@ namespace Playfair
             rtbCiphtertext.Text = result.ToString();
 
         }
+
+      
     }
 }
