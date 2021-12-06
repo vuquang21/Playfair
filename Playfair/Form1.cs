@@ -218,13 +218,14 @@ namespace Playfair
                     if (_stringPlaintext[i] == _stringPlaintext[i + 1])
                     {
                         _stringPlaintext.Insert(i + 1, "X");
+                        
                     }
 
                 }
             }
 
             // độ dài plaintext là lẻ thì thêm x ở cuối 
-            else
+            if (_stringPlaintext.Length % 2 == 1)
             {
                 _stringPlaintext.Append("X");
             }
@@ -244,10 +245,10 @@ namespace Playfair
             }
             StringBuilder result = new StringBuilder();
             // mã hoá 
-            for (int i = 0; i < _stringPlaintext.Length * 2; i += 4)
+            for (int i = 0; i < _stringPlaintext.Length * 2 - 1; i += 4)
             {
                 // nếu tạo thành hình chữ nhật
-                if ((list[i] != list[i + 2]) && (list[i + 1] != list[i + 3]))
+                if ((list[i] != list[i + 2]) && (list[i + 1] != list[i + 3])) 
                 {
 
                     result.Append(matrix[list[i], list[i + 3]]);
@@ -255,8 +256,6 @@ namespace Playfair
                     result.Append(' ');
                 }
                 // nếu tạo thành 1 dòng. 
-
-                // đang lỗi 
 
                 if (list[i] == list[i + 2])
                 {
@@ -267,7 +266,7 @@ namespace Playfair
                     }
                     else
                     {
-                        result.Append(matrix[list[i], list[i + 1]]);
+                        result.Append(matrix[list[i], list[i + 1] + 1]);
                     }
                     if (list[i + 3] == 4)
                     {
@@ -280,7 +279,7 @@ namespace Playfair
                     }
                     result.Append(' ');
                 }
-                
+
                 // nếu tạo thành cột
                 if (list[i + 1] == list[i + 3])
                 {
@@ -302,13 +301,10 @@ namespace Playfair
                     }
                     result.Append(' ');
                 }
-                
+
             }
 
-
-
-        
-
+     
             rtbCiphtertext.Text = result.ToString();
 
         }
