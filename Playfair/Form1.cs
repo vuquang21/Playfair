@@ -58,7 +58,11 @@ namespace Playfair
 
 
             // kiểm tra plaintext và key rỗng
-            if (plaintext == String.Empty || key == String.Empty)
+            /*if (plaintext == String.Empty || key == String.Empty)
+            {
+                MessageBox.Show("Message: Plaintext or key is empty!!!");
+            }*/
+            if (string.IsNullOrEmpty(rtbPlaintext.Text) || string.IsNullOrEmpty(tbKey.Text))
             {
                 MessageBox.Show("Message: Plaintext or key is empty!!!");
             }
@@ -126,7 +130,7 @@ namespace Playfair
 
             // chèn key và bảng chữ cái vào trong ma trận + hiển thị ma trận 
 
-            
+
             int k = 0;
             KeyAddAlpa(_stringKey, alpa);
             var keyShow = "";
@@ -149,11 +153,11 @@ namespace Playfair
 
         private void Form1_Load(object sender, EventArgs e, List<char> arrPlaintext, KeyEventArgs key)
         {
-            
+
         }
 
-       
-        
+
+
         public void KeyAddAlpa(StringBuilder _stringKey, char[] alpa)
         {
             foreach (var i in alpa)
@@ -200,15 +204,17 @@ namespace Playfair
         }
         private void btnEncryp_Click(object sender, EventArgs e)
         {
-
+            onInputKeyChange(sender, e);
             var plaintext = rtbPlaintext.Text;
+
             plaintext = plaintext.ToUpper();
             var charsToRemove = new string[] { "@", ",", ".", ";", "'", " " };
             foreach (var c in charsToRemove)
             {
-                
+
                 plaintext = plaintext.Replace(c, string.Empty);
             }
+
             StringBuilder _stringPlaintext = new StringBuilder(plaintext);
             if (plaintext.Length % 2 == 0)
             {
@@ -218,7 +224,7 @@ namespace Playfair
                     if (_stringPlaintext[i] == _stringPlaintext[i + 1])
                     {
                         _stringPlaintext.Insert(i + 1, "X");
-                        
+
                     }
 
                 }
@@ -238,74 +244,72 @@ namespace Playfair
 
             }
 
-            var list = new int[_stringPlaintext.Length * 2];
-            for (int i = 0; (i < _stringPlaintext.Length * 2); i++)
-            {
-                list[i] = arr[i];
-            }
+
+
             StringBuilder result = new StringBuilder();
             // mã hoá 
             for (int i = 0; i < _stringPlaintext.Length * 2 - 1; i += 4)
             {
                 // nếu tạo thành hình chữ nhật
-                if ((list[i] != list[i + 2]) && (list[i + 1] != list[i + 3])) 
+                if ((arr[i] != arr[i + 2]) && (arr[i + 1] != arr[i + 3]))
                 {
 
-                    result.Append(matrix[list[i], list[i + 3]]);
-                    result.Append(matrix[list[i + 2], list[i + 1]]);
+                    result.Append(matrix[arr[i], arr[i + 3]]);
+                    result.Append(matrix[arr[i + 2], arr[i + 1]]);
                     result.Append(' ');
                 }
                 // nếu tạo thành 1 dòng. 
 
-                if (list[i] == list[i + 2])
+                if (arr[i] == arr[i + 2])
                 {
                     // nếu từ thứ nhất ở cột cuối
-                    if (list[i + 1] == 4)
+                    if (arr[i + 1] == 4)
                     {
-                        result.Append(matrix[list[i], 0]);
+                        result.Append(matrix[arr[i], 0]);
                     }
                     else
                     {
-                        result.Append(matrix[list[i], list[i + 1] + 1]);
+                        result.Append(matrix[arr[i], arr[i + 1] + 1]);
                     }
-                    if (list[i + 3] == 4)
+                    if (arr[i + 3] == 4)
                     {
-                        result.Append(matrix[list[i + 2], 0]);
+                        result.Append(matrix[arr[i + 2], 0]);
 
                     }
                     else
                     {
-                        result.Append(matrix[list[i + 2], list[i + 3] + 1]);
+                        result.Append(matrix[arr[i + 2], arr[i + 3] + 1]);
                     }
                     result.Append(' ');
                 }
 
                 // nếu tạo thành cột
-                if (list[i + 1] == list[i + 3])
+                if (arr[i + 1] == arr[i + 3])
                 {
-                    if (list[i] == 4)
+                    if (arr[i] == 4)
                     {
-                        result.Append(matrix[0, list[i + 1]]);
+                        result.Append(matrix[0, arr[i + 1]]);
                     }
                     else
                     {
-                        result.Append(matrix[list[i] + 1, list[i + 1]]);
+                        result.Append(matrix[arr[i] + 1, arr[i + 1]]);
                     }
-                    if (list[i + 2] == 4)
+                    if (arr[i + 2] == 4)
                     {
-                        result.Append(matrix[0, list[i + 3]]);
+                        result.Append(matrix[0, arr[i + 3]]);
                     }
                     else
                     {
-                        result.Append(matrix[list[i + 2] + 1, list[i + 3]]);
+                        result.Append(matrix[arr[i + 2] + 1, arr[i + 3]]);
                     }
                     result.Append(' ');
                 }
 
             }
 
-     
+
             rtbCiphtertext.Text = result.ToString();
+
 
         }
 
@@ -368,7 +372,6 @@ namespace Playfair
             }
 
 
-            int k = 0;
             var arr = new List<int>(_stringPlaintext.Length * 2);
             // chỉ số của các phần tử
             for (int i = 0; i < _stringPlaintext.Length * 2; i++)
@@ -377,89 +380,88 @@ namespace Playfair
 
             }
 
-            var list = new int[_stringPlaintext.Length * 2];
-            for (int i = 0; (i < _stringPlaintext.Length * 2); i++)
-            {
-                list[i] = arr[i];
-            }
+
             StringBuilder result = new StringBuilder();
             // mã hoá 
             for (int i = 0; i < _stringPlaintext.Length * 2; i += 4)
             {
                 // nếu tạo thành hình chữ nhật
-                if ((list[i] != list[i + 2]) && (list[i + 1] != list[i + 3]))
+                if ((arr[i] != arr[i + 2]) && (arr[i + 1] != arr[i + 3]))
                 {
 
-                    result.Append(matrix[list[i], list[i + 3]]);
-                    result.Append(matrix[list[i + 2], list[i + 1]]);
+                    result.Append(matrix[arr[i], arr[i + 3]]);
+                    result.Append(matrix[arr[i + 2], arr[i + 1]]);
                     result.Append(' ');
                 }
                 // nếu tạo thành 1 dòng. 
 
                 // đang lỗi 
 
-                if (list[i] == list[i + 2])
+                if (arr[i] == arr[i + 2])
                 {
                     // nếu từ thứ nhất ở cột cuối
-                    if (list[i + 1] == 4)
+                    if (arr[i + 1] == 4)
                     {
-                        result.Append(matrix[list[i], 0]);
+                        result.Append(matrix[arr[i], 0]);
                     }
                     else
                     {
-                        result.Append(matrix[list[i], list[i + 1]]);
+                        result.Append(matrix[arr[i], arr[i + 1]]);
                     }
-                    if (list[i + 3] == 4)
+                    if (arr[i + 3] == 4)
                     {
-                        result.Append(matrix[list[i + 2], 0]);
+                        result.Append(matrix[arr[i + 2], 0]);
 
                     }
                     else
                     {
-                        result.Append(matrix[list[i + 2], list[i + 3] + 1]);
+                        result.Append(matrix[arr[i + 2], arr[i + 3] + 1]);
                     }
                     result.Append(' ');
                 }
                 // nếu tạo thành cột
-                if (list[i + 1] == list[i + 3])
+                if (arr[i + 1] == arr[i + 3])
                 {
-                    if (list[i] == 4)
+                    if (arr[i] == 4)
                     {
-                        result.Append(matrix[0, list[i + 1]]);
+                        result.Append(matrix[0, arr[i + 1]]);
                     }
                     else
                     {
-                        result.Append(matrix[list[i] - 1, list[i + 1]]);
+                        result.Append(matrix[arr[i] - 1, arr[i + 1]]);
                     }
-                    if (list[i + 2] == 4)
+                    if (arr[i + 2] == 4)
                     {
-                        result.Append(matrix[0, list[i + 3]]);
+                        result.Append(matrix[0, arr[i + 3]]);
                     }
                     else
                     {
-                        result.Append(matrix[list[i + 2] - 1, list[i + 3]]);
+                        result.Append(matrix[arr[i + 2] - 1, arr[i + 3]]);
                     }
                     result.Append(' ');
                 }
-                
+
             }
-            
-           /* foreach (var c in charsToRemove)
-            {
-                result = result.Replace(c, string.Empty);
-                
-            }
-            k = result.Length;
-            if (result[k - 1].ToString() == "X") 
-            {
-                result.Replace("X", string.Empty);
-            }*/
+
+            /* foreach (var c in charsToRemove)
+             {
+                 result = result.Replace(c, string.Empty);
+
+             }
+             k = result.Length;
+             if (result[k - 1].ToString() == "X") 
+             {
+                 result.Replace("X", string.Empty);
+             }*/
 
 
             rtbCiphtertext.Text = result.ToString();
 
         }
 
-      
+        private void tbKey_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

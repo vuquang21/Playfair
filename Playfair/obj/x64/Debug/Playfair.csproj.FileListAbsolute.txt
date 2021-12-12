@@ -1,0 +1,11 @@
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\bin\x64\Debug\Playfair.exe.config
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\bin\x64\Debug\Playfair.exe
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\bin\x64\Debug\Playfair.pdb
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.csproj.SuggestedBindingRedirects.cache
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.Form1.resources
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.Properties.Resources.resources
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.csproj.GenerateResource.cache
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.csproj.CoreCompileInputs.cache
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.exe
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.pdb
+D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\x64\Debug\Playfair.csproj.AssemblyReference.cache

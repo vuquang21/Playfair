@@ -55,6 +55,7 @@
             this.tbKey.Name = "tbKey";
             this.tbKey.Size = new System.Drawing.Size(640, 22);
             this.tbKey.TabIndex = 1;
+            this.tbKey.TextChanged += new System.EventHandler(this.tbKey_TextChanged);
             // 
             // rtbPlaintext
             // 
