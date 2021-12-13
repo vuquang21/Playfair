@@ -20,3 +20,13 @@ D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Debug\Playfair.csproj.GenerateRes
 D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Debug\Playfair.csproj.CoreCompileInputs.cache
 D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Debug\Playfair.exe
 D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Debug\Playfair.pdb
+D:\playfair\Playfair\bin\Debug\Playfair.exe.config
+D:\playfair\Playfair\bin\Debug\Playfair.exe
+D:\playfair\Playfair\bin\Debug\Playfair.pdb
+D:\playfair\Playfair\obj\Debug\Playfair.csproj.AssemblyReference.cache
+D:\playfair\Playfair\obj\Debug\Playfair.Form1.resources
+D:\playfair\Playfair\obj\Debug\Playfair.Properties.Resources.resources
+D:\playfair\Playfair\obj\Debug\Playfair.csproj.GenerateResource.cache
+D:\playfair\Playfair\obj\Debug\Playfair.csproj.CoreCompileInputs.cache
+D:\playfair\Playfair\obj\Debug\Playfair.exe
+D:\playfair\Playfair\obj\Debug\Playfair.pdb

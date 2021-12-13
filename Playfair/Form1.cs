@@ -64,7 +64,9 @@ namespace Playfair
             }*/
             if (string.IsNullOrEmpty(rtbPlaintext.Text) || string.IsNullOrEmpty(tbKey.Text))
             {
-                MessageBox.Show("Message: Plaintext or key is empty!!!");
+                //MessageBox.Show("Message: Plaintext or key is empty!!!");
+                String defaultKey = new string(alpa);
+                tbKey.Text = defaultKey;
             }
             else
             {
