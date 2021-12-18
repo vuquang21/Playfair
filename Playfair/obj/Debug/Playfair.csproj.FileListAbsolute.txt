@@ -30,3 +30,13 @@ D:\playfair\Playfair\obj\Debug\Playfair.csproj.GenerateResource.cache
 D:\playfair\Playfair\obj\Debug\Playfair.csproj.CoreCompileInputs.cache
 D:\playfair\Playfair\obj\Debug\Playfair.exe
 D:\playfair\Playfair\obj\Debug\Playfair.pdb
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\bin\Debug\Playfair.exe.config
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\bin\Debug\Playfair.exe
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\bin\Debug\Playfair.pdb
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.Form1.resources
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.Properties.Resources.resources
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.csproj.GenerateResource.cache
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.csproj.CoreCompileInputs.cache
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.exe
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Debug\Playfair.pdb

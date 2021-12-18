@@ -9,3 +9,13 @@ D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Release\Playfair.csproj.GenerateR
 D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Release\Playfair.csproj.CoreCompileInputs.cache
 D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Release\Playfair.exe
 D:\MyFolder\ATM\Playfair\Playfair\Playfair\obj\Release\Playfair.pdb
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\bin\Release\Playfair.exe.config
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\bin\Release\Playfair.exe
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\bin\Release\Playfair.pdb
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.Form1.resources
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.Properties.Resources.resources
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.csproj.GenerateResource.cache
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.csproj.CoreCompileInputs.cache
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.exe
+C:\Users\admin\OneDrive\Documents\Antoanmang\playfair\Playfair\obj\Release\Playfair.pdb

@@ -397,7 +397,6 @@ namespace Playfair
                 }
                 // nếu tạo thành 1 dòng. 
 
-                // đang lỗi 
 
                 if (arr[i] == arr[i + 2])
                 {
